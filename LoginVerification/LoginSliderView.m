@@ -62,10 +62,11 @@
 #pragma mark - 初始化
 -(void)show:(ViewType)viewType {
     
+    _viewType = viewType;
+    
     [self initData];
     [self initView];
-    
-    _viewType = viewType;
+
     //    拼图验证
     if (viewType == ViewTypePuzzle) {
         [self initPuzzleView];
